@@ -1,0 +1,96 @@
+{
+  "schema": "nuxtjp://localized-site/site-config/v1",
+  "siteId": "vpremises-site",
+  "serviceId": "vpremises",
+  "origin": "https://vpremises.com",
+  "audienceScope": "global",
+  "defaultLocale": "en",
+  "fallbackLocale": "ja",
+  "prefixDefaultLocale": false,
+  "locales": ["ja", "en"],
+  "externalActions": false,
+  "content": {
+    "ja": {
+      "brand": "vPremises",
+      "tagline": "端末、WSL、マウント済みファイル領域を境界付きで観測するローカル製品",
+      "summary": "vPremisesはPC、WSL、ローカルファイルシステム、マウント済みの業務フォルダを、利用者が指定した範囲内で観測する独立Rust製品です。外部へデータを送らず、既定ではmetadataと検証Receiptだけを生成します。",
+      "features": [
+        {"id": "bounded-observation", "title": "範囲を限定した観測", "summary": "明示されたroot、深さ、件数、容量上限の内側だけを走査し、境界外を拒否します。"},
+        {"id": "mount-boundary", "title": "マウント境界", "summary": "WSLから見えるWindows領域やSharePoint同期先を、原本の所有権を変えずに識別します。"},
+        {"id": "operational-receipts", "title": "観測Receipt", "summary": "取得時刻、対象、件数、digest、警告を、内容そのものと分離した機械可読記録として返します。"}
+      ],
+      "docs": {
+        "overview": {
+          "slug": "/docs",
+          "title": "vPremisesの概要",
+          "summary": "ローカル観測と外部管理を分離する製品境界を説明します。",
+          "sections": [
+            {"id": "observer-boundary", "title": "ローカルObserver", "body": ["vPremisesは利用者が管理する端末上で、指定したfilesystem rootと実行環境のmetadataを観測します。クラウド管理、Workflow実行、外部サービスAPIは別製品の責務です。"]},
+            {"id": "content-boundary", "title": "内容を最小化する", "body": ["既定の観測は存在、種類、サイズ、時刻、digest等に限定します。ファイル本文を必要とする取得は、目的、分類、上限、出力先を別の契約で明示します。"]}
+          ]
+        },
+        "gettingStarted": {
+          "slug": "/docs/getting-started",
+          "title": "ローカル観測を始める",
+          "summary": "対象を限定し、foregroundで結果を確認する順序です。",
+          "sections": [
+            {"id": "define-root", "title": "観測rootを定める", "body": ["専用設定で絶対root、許可する種類、深さ、最大件数、symlink方針を定めます。ホーム全体や未解決の環境変数を対象にしないでください。"]},
+            {"id": "run-foreground", "title": "foregroundで確認する", "body": ["最初は読み取り専用の検査をforegroundで実行し、Receiptと警告を確認します。常駐化や上位システムへの受け渡しは、結果を承認した後に別途設定します。"]}
+          ]
+        },
+        "security": {
+          "slug": "/docs/security",
+          "title": "ローカル観測の安全性",
+          "summary": "filesystem境界、symlink、外部送信を扱う原則です。",
+          "sections": [
+            {"id": "filesystem-safety", "title": "filesystem境界を閉じる", "body": ["許可rootの外側、symlink先、特殊file、過大fileを既定で追跡しません。観測に書き込み権限は不要であり、削除や移動を実行しません。"]},
+            {"id": "no-upload", "title": "外部へ送信しない", "body": ["このサイトもvPremisesの既定観測も、ファイル一覧や端末情報を外部へ送信しません。上位製品へ渡す場合は最小化したReceiptを版付きInterfaceで明示的に渡します。"]}
+          ]
+        }
+      },
+      "privacy": {"label": "プライバシー", "summary": "公開サイトは端末、filesystem、ファイル名、稼働状況を収集しません。ローカル観測では個人・顧客フォルダを既定対象から外し、必要なmetadataだけを保持してください。"},
+      "contact": {"label": "vPremisesに関する連絡", "summary": "観測境界や不具合の報告は、vpremises.comで確認済みとして案内される窓口へ製品版、OS、最小化した設定とReceiptだけを送ってください。実際のパスや文書を伏せてください。"}
+    },
+    "en": {
+      "brand": "vPremises",
+      "tagline": "A local product for bounded observation of devices, WSL, and mounted file areas",
+      "summary": "vPremises is an independent Rust product that observes PCs, WSL, local filesystems, and mounted work folders only within user-declared boundaries. It sends no data externally and produces metadata and validation receipts by default.",
+      "features": [
+        {"id": "bounded-observation", "title": "Bounded observation", "summary": "Scans only inside declared roots, depth, item-count, and size limits and rejects boundary escapes."},
+        {"id": "mount-boundary", "title": "Mount boundary", "summary": "Identifies Windows areas visible from WSL and SharePoint-synchronized folders without changing source ownership."},
+        {"id": "operational-receipts", "title": "Observation receipts", "summary": "Returns time, target, count, digest, and warnings as a machine-readable record separated from content."}
+      ],
+      "docs": {
+        "overview": {
+          "slug": "/docs",
+          "title": "vPremises overview",
+          "summary": "Explains the product boundary between local observation and external management.",
+          "sections": [
+            {"id": "observer-boundary", "title": "Local observer", "body": ["vPremises observes declared filesystem roots and environment metadata on a user-managed device. Cloud administration, workflow execution, and external-service APIs belong to separate products."]},
+            {"id": "content-boundary", "title": "Minimize content", "body": ["Default observation is limited to existence, kind, size, time, digest, and similar metadata. Content acquisition requires a separate contract stating purpose, classification, limits, and destination."]}
+          ]
+        },
+        "gettingStarted": {
+          "slug": "/docs/getting-started",
+          "title": "Start local observation",
+          "summary": "The sequence for limiting a target and reviewing results in the foreground.",
+          "sections": [
+            {"id": "define-root", "title": "Define an observation root", "body": ["Use dedicated configuration to set an absolute root, allowed kinds, depth, maximum items, and symlink policy. Do not target an entire home directory or an unresolved environment variable."]},
+            {"id": "run-foreground", "title": "Review in the foreground", "body": ["Start with a read-only foreground inspection and review its receipt and warnings. Configure persistence or handoff to an upper system separately only after approving the result."]}
+          ]
+        },
+        "security": {
+          "slug": "/docs/security",
+          "title": "Local-observation security",
+          "summary": "Principles for filesystem boundaries, symlinks, and external transmission.",
+          "sections": [
+            {"id": "filesystem-safety", "title": "Close the filesystem boundary", "body": ["Paths outside allowed roots, symlink targets, special files, and oversized files are not followed by default. Observation needs no write permission and does not delete or move data."]},
+            {"id": "no-upload", "title": "No external upload", "body": ["Neither this site nor default vPremises observation sends file lists or device data externally. When an upper product needs a result, explicitly hand over a minimized receipt through a versioned interface."]}
+          ]
+        }
+      },
+      "privacy": {"label": "Privacy", "summary": "The public site collects no device, filesystem, filename, or operating-state data. Exclude personal and customer folders from default local observation and retain only necessary metadata."},
+      "contact": {"label": "vPremises contact", "summary": "Report boundary or product issues through a verified channel identified on vpremises.com, sending only the version, OS, minimized configuration, and receipt. Redact real paths and documents."}
+    }
+  }
+}
