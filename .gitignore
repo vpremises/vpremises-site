@@ -79,3 +79,6 @@ __pycache__/
 
 # Locally staged package archives are excluded at every directory depth.
 *.tgz
+
+# The shared site runner may create a generated output symlink.
+/dist
