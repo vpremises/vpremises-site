@@ -1,0 +1,87 @@
+{
+  "schema": "nuxtjp://showcase/v1",
+  "owner": "vpremises",
+  "observedAt": "2026-10-13T04:06:00Z",
+  "entries": [
+    {
+      "id": "vpremises-port-office",
+      "kind": "oss",
+      "name": {
+        "ja": "port-office",
+        "en": "port-office"
+      },
+      "summary": {
+        "ja": "非root・CA証明書を持つ最小Debian Dockerベース。0.1.0は未公開候補です。",
+        "en": "Minimal non-root Debian Docker base with CA trust. Version 0.1.0 is an unpublished candidate."
+      },
+      "repository": "https://github.com/vpremises/port-office",
+      "homepage": "https://hub.docker.com/u/coelaoss",
+      "license": "Apache-2.0",
+      "metrics": []
+    },
+    {
+      "id": "vpremises-environment-operations",
+      "kind": "oss",
+      "name": {
+        "ja": "environment-operations",
+        "en": "environment-operations"
+      },
+      "summary": {
+        "ja": "環境計画CLI、security inspector、Windows custody helperと製品playground。",
+        "en": "Product planning CLI, security inspector, Windows custody helper and playgrounds."
+      },
+      "repository": "https://github.com/vpremises/environment-operations",
+      "homepage": "https://github.com/vpremises/environment-operations",
+      "license": "Apache-2.0",
+      "metrics": []
+    },
+    {
+      "id": "vpremises-environment-deployment",
+      "kind": "oss",
+      "name": {
+        "ja": "environment-deployment",
+        "en": "environment-deployment"
+      },
+      "summary": {
+        "ja": "環境schema、resolver、plan/receipt台帳とIncus renderer。実profileは含みません。",
+        "en": "Environment schemas, resolution, plan/receipt ledgers and Incus rendering; no actual profiles."
+      },
+      "repository": "https://github.com/vpremises/environment-deployment",
+      "homepage": "https://github.com/vpremises/environment-deployment",
+      "license": "Apache-2.0",
+      "metrics": []
+    },
+    {
+      "id": "vpremises-vpremises-site",
+      "kind": "oss",
+      "name": {
+        "ja": "vpremises-site",
+        "en": "vpremises-site"
+      },
+      "summary": {
+        "ja": "vpremises/vpremises-site の公開ソース・利用情報。仕様、公開版、権利表示と検証範囲は正本のREADMEで確認できます。",
+        "en": "Explain local metadata observation and the management of user-controlled environments."
+      },
+      "repository": "https://github.com/vpremises/vpremises-site",
+      "homepage": "https://github.com/vpremises/vpremises-site",
+      "license": "Apache-2.0",
+      "metrics": []
+    },
+    {
+      "id": "vpremises-cloud-router",
+      "kind": "oss",
+      "name": {
+        "ja": "cloud-router",
+        "en": "cloud-router"
+      },
+      "summary": {
+        "ja": "vpremises/cloud-router の公開ソース・利用情報。仕様、公開版、権利表示と検証範囲は正本のREADMEで確認できます。",
+        "en": "Study how a Swarm deployment can route application traffic through Traefik."
+      },
+      "repository": "https://github.com/vpremises/cloud-router",
+      "homepage": "https://github.com/vpremises/cloud-router",
+      "license": "Apache-2.0",
+      "metrics": []
+    }
+  ]
+}
