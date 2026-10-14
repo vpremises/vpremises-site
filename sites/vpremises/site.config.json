@@ -15,92 +15,120 @@
   "content": {
     "ja": {
       "brand": "vPremises",
-      "tagline": "環境の運用を、見通せる構造へ。",
-      "summary": "環境の設定、変更計画、操作とその記録。vPremisesは、環境を扱う一連の流れを役割の分かる部品として構成します。",
+      "tagline": "実行環境を、再現できる運用へ。",
+      "summary": "vPremisesは、コンテナや仮想化を使う実行環境の構成・変更計画・結果の記録・検査を支えるOSSを開発する組織です。環境の設計をライブラリとCLIに分け、再現可能な運用の土台を整えます。",
       "features": [
         {
           "id": "focus-1",
-          "title": "環境の計画",
-          "summary": "設定とschemaから、環境の構造と変更計画を扱います。"
+          "title": "構成と変更計画",
+          "summary": "profileとサービス要件を解決し、環境設定、差分計画、操作結果の台帳を扱います。"
         },
         {
           "id": "focus-2",
-          "title": "操作と記録",
-          "summary": "CLIによる操作と、変更の記録をつなぎます。"
+          "title": "コンテナと仮想化の基盤",
+          "summary": "Incus用のOpenTofu構成生成、最小Debianベース、Traefikのルーティング例を提供します。"
         },
         {
           "id": "focus-3",
-          "title": "部品の責務",
-          "summary": "共通の基盤と、個別環境の設定を分けて保守します。"
+          "title": "検査と操作の道具",
+          "summary": "環境計画CLIと、対象を限定したローカルのOSS・ファイル・ネットワーク検査を組み合わせます。"
         }
       ],
       "docs": {
         "overview": {
           "slug": "/docs",
-          "title": "vPremisesの概要",
-          "summary": "ローカル観測と外部管理を分離する製品境界を説明します。",
+          "title": "vPremisesの役割と機能",
+          "summary": "vPremisesは、コンテナや仮想化を使う実行環境の構成・変更計画・結果の記録・検査を支えるOSSを開発する組織です。環境の設計をライブラリとCLIに分け、再現可能な運用の土台を整えます。",
           "sections": [
             {
-              "id": "observer-boundary",
-              "title": "ローカルObserver",
+              "id": "planning",
+              "title": "環境の設計と計画",
               "body": [
-                "vPremisesは利用者が管理する端末上で、指定したfilesystem rootと実行環境のmetadataを観測します。クラウド管理、Workflow実行、外部サービスAPIは別製品の責務です。"
+                "environment-deploymentは、環境schema、profile解決、desired-state digest、SQLiteのplan/receipt台帳、保守windowとtimer設定の生成を提供します。Incus rendererは制限付きproject・profile・instanceのOpenTofu JSONを生成します。設定生成だけでは実環境を作成せず、timerも有効化しません。"
               ]
             },
             {
-              "id": "content-boundary",
-              "title": "内容を最小化する",
+              "id": "operations",
+              "title": "運用CLIとセキュリティ検査",
               "body": [
-                "既定の観測は存在、種類、サイズ、時刻、digest等に限定します。ファイル本文を必要とする取得は、目的、分類、上限、出力先を別の契約で明示します。"
+                "environment-operationsは構成解決、計画、receipt作成・記録のCLIを提供します。security inspectorはLinux/WSLで指定した範囲のOSS文書、ライセンス、配布物、ファイルとネットワークを検査し、JSON/JSONLで結果を出力します。検出器と観測範囲は明示する必要があります。"
               ]
             },
             {
-              "id": "page-feedback",
-              "title": "ページから改善へ",
+              "id": "container-base",
+              "title": "コンテナの基礎とルーティング例",
               "body": [
-                "対象ページ、目的、期待する挙動、package版と公開できる再現手順をownerへ共有してください。配置の調整は実際の利用とフィードバックから行います。秘密鍵、token、実顧客データは送らないでください。"
+                "port-officeはDocker Bakeで管理する、非root・CA証明書付きの最小Debianベースです。Node/Pythonや製品実装を同梱せず、現在はイメージ公開前のsource候補です。cloud-routerはDocker SwarmとTraefikのHTTP/HTTPS構成例を提供します。設定検証と実配備・証明書発行を分けます。"
+              ]
+            },
+            {
+              "id": "host-example",
+              "title": "ホスト配備の具体例",
+              "body": [
+                "azure-openemrはOpenEMRのホスト配備とNGINXの保護パス検証の公開例です。Azureのリソース作成や医療サービスの本番運用を提供する製品ではなく、実行前に利用条件・設定・権限を確認するためのソースです。"
+              ]
+            },
+            {
+              "id": "boundaries",
+              "title": "共通基盤と実環境を分ける",
+              "body": [
+                "認可された実行、資格情報保管、セキュリティ観測の共通部分はCrowsi、汎用的なデータ処理やAPI連携はZixcelを利用します。vPremisesは環境向けの構成と操作面を担当します。実profile・秘密情報・登録済み環境は非公開で管理し、この紹介サイトには含めません。"
               ]
             }
           ]
         },
         "gettingStarted": {
           "slug": "/docs/getting-started",
-          "title": "ローカル観測を始める",
-          "summary": "対象を限定し、foregroundで結果を確認する順序です。",
+          "title": "機能を選び、ローカルで試す",
+          "summary": "必要な機能のリポジトリとplaygroundを選び、合成データで構成と検証を確認します。",
           "sections": [
             {
-              "id": "define-root",
-              "title": "観測rootを定める",
+              "id": "select",
+              "title": "目的から選ぶ",
               "body": [
-                "専用設定で絶対root、許可する種類、深さ、最大件数、symlink方針を定めます。ホーム全体や未解決の環境変数を対象にしないでください。"
+                "構成と変更計画はenvironment-deployment、環境計画CLIと検査はenvironment-operations、Debianベースはport-office、ルーティング例はcloud-routerから始めます。各プロジェクトのREADMEとLICENSEで利用手順を確認してください。"
               ]
             },
             {
-              "id": "run-foreground",
-              "title": "foregroundで確認する",
+              "id": "synthetic",
+              "title": "playgroundで流れを理解する",
               "body": [
-                "最初は読み取り専用の検査をforegroundで実行し、Receiptと警告を確認します。常駐化や上位システムへの受け渡しは、結果を承認した後に別途設定します。"
+                "environment-planning playgroundは、使い捨ての合成入力でresolve→Incus構成生成→plan→receipt記録→再実行の拒否を確認できます。実アカウントや本番データは不要です。"
+              ]
+            },
+            {
+              "id": "live",
+              "title": "実環境への適用を分ける",
+              "body": [
+                "生成した設定やreceiptは、実操作が成功した証明とは限りません。クラウド連携、実profile、サービス設置、資格情報登録、Windows署名、timer有効化は、それぞれの対象と権限・受入条件を定めて実施します。"
               ]
             }
           ]
         },
         "security": {
           "slug": "/docs/security",
-          "title": "ローカル観測の安全性",
-          "summary": "filesystem境界、symlink、外部送信を扱う原則です。",
+          "title": "運用と検査の境界",
+          "summary": "生成、検査、実操作の権限と観測範囲を区別します。",
           "sections": [
             {
-              "id": "filesystem-safety",
-              "title": "filesystem境界を閉じる",
+              "id": "scope",
+              "title": "検査範囲を限定する",
               "body": [
-                "許可rootの外側、symlink先、特殊file、過大fileを既定で追跡しません。観測に書き込み権限は不要であり、削除や移動を実行しません。"
+                "検査CLIは明示したroot、件数、深さ、内容取得の上限で動作します。WSLでの検査はLinuxのnamespaceとマウントされた範囲を対象とし、Windowsホスト全体の安全性を保証しません。未取得や古い観測を成功とみなしません。"
               ]
             },
             {
-              "id": "no-upload",
-              "title": "外部へ送信しない",
+              "id": "ownership",
+              "title": "設定と実操作の権限",
               "body": [
-                "このサイトもvPremisesの既定観測も、ファイル一覧や端末情報を外部へ送信しません。上位製品へ渡す場合は最小化したReceiptを版付きInterfaceで明示的に渡します。"
+                "構成生成はproviderの資格情報を必要としません。実配備や資格情報の操作は利用者が選んだ権限と経路で行い、実環境のprofileや秘密鍵を公開設定に含めません。"
+              ]
+            },
+            {
+              "id": "site",
+              "title": "公開サイトの役割",
+              "body": [
+                "このサイトはOSSの機能と公開ソースを紹介します。環境へのログインや変更、端末検査、医療データの収集は行いません。"
               ]
             }
           ]
@@ -108,101 +136,129 @@
       },
       "privacy": {
         "label": "プライバシー",
-        "summary": "公開サイトは端末、filesystem、ファイル名、稼働状況を収集しません。ローカル観測では個人・顧客フォルダを既定対象から外し、必要なmetadataだけを保持してください。"
+        "summary": "公開サイトは端末情報や環境設定を収集しません。検査結果と運用台帳は、利用者が選んだローカルまたは非公開の保管先で管理します。"
       },
       "contact": {
         "label": "vPremisesに関する連絡",
-        "summary": "観測境界や不具合の報告は、vpremises.comで確認済みとして案内される窓口へ製品版、OS、最小化した設定とReceiptだけを送ってください。実際のパスや文書を伏せてください。"
+        "summary": "各公開リポジトリのIssueで、目的と最小限の再現手順を共有してください。実profile、資格情報、検出した秘密情報、顧客・医療データは送らないでください。"
       }
     },
     "en": {
       "brand": "vPremises",
-      "tagline": "Make environment operations legible.",
-      "summary": "vPremises connects environment configuration, change plans, operations and records through components with explicit responsibilities.",
+      "tagline": "Reproducible foundations for your environments.",
+      "summary": "vPremises develops open-source foundations for configuring, planning, recording and inspecting container and virtualization environments. Libraries and operator tools make environment design reproducible.",
       "features": [
         {
           "id": "focus-1",
-          "title": "Plan environments",
-          "summary": "Work with environment structure and change plans through configuration and schemas."
+          "title": "Configuration and change plans",
+          "summary": "Resolve profiles and service requirements, plan changes, and record matching operation receipts."
         },
         {
           "id": "focus-2",
-          "title": "Operate and record",
-          "summary": "Connect command-line operations with records of environment changes."
+          "title": "Container and virtualization foundations",
+          "summary": "Generate Incus OpenTofu configuration; explore a minimal Debian base and Traefik routing examples."
         },
         {
           "id": "focus-3",
-          "title": "Keep responsibilities clear",
-          "summary": "Maintain reusable foundations separately from individual environment configuration."
+          "title": "Inspection and operator tools",
+          "summary": "Compose environment-planning commands with scoped local OSS, file and network inspection."
         }
       ],
       "docs": {
         "overview": {
           "slug": "/docs",
-          "title": "vPremises overview",
-          "summary": "Explains the product boundary between local observation and external management.",
+          "title": "vPremises purpose and capabilities",
+          "summary": "vPremises develops open-source foundations for configuring, planning, recording and inspecting container and virtualization environments. Libraries and operator tools make environment design reproducible.",
           "sections": [
             {
-              "id": "observer-boundary",
-              "title": "Local observer",
+              "id": "planning",
+              "title": "Environment design and planning",
               "body": [
-                "vPremises observes declared filesystem roots and environment metadata on a user-managed device. Cloud administration, workflow execution, and external-service APIs belong to separate products."
+                "environment-deployment provides schemas, profile resolution, desired-state digests, SQLite plan/receipt ledgers and maintenance-window/timer configuration. The Incus renderer generates constrained project, profile and instance OpenTofu JSON. Rendering does not provision an environment or enable a timer."
               ]
             },
             {
-              "id": "content-boundary",
-              "title": "Minimize content",
+              "id": "operations",
+              "title": "Operator tools and inspection",
               "body": [
-                "Default observation is limited to existence, kind, size, time, digest, and similar metadata. Content acquisition requires a separate contract stating purpose, classification, limits, and destination."
+                "environment-operations provides configuration resolution, plan generation and receipt creation/recording commands. Its security inspector checks selected OSS documents, licenses, archives, files and network observations in Linux/WSL, producing JSON/JSONL. Detectors and inspection scope are explicit."
               ]
             },
             {
-              "id": "page-feedback",
-              "title": "From page to feedback",
+              "id": "container-base",
+              "title": "Container foundations and routing examples",
               "body": [
-                "Share the page, purpose, expected behavior, package version and public reproduction steps with the owner. Refine placement using actual usage and feedback. Do not share tokens, keys or customer data."
+                "port-office maintains a minimal non-root Debian base with CA trust through Docker Bake. It includes no Node/Python runtime or product implementation and remains an unpublished image candidate. cloud-router provides HTTP/HTTPS Docker Swarm and Traefik examples; configuration validation is separate from deployment and certificate issuance."
+              ]
+            },
+            {
+              "id": "host-example",
+              "title": "A host deployment example",
+              "body": [
+                "azure-openemr is a public OpenEMR host-deployment example with NGINX protected-path regression checks. It does not itself provision Azure resources or establish a production medical service. Review terms, configuration and permissions before use."
+              ]
+            },
+            {
+              "id": "boundaries",
+              "title": "Separate shared foundations from real environments",
+              "body": [
+                "Crowsi owns reusable authorized-execution, credential-custody and security-observation foundations; Zixcel provides general data and API integration. vPremises composes environment-specific configuration and tools. Real profiles, secrets and registered environments remain private and are not included here."
               ]
             }
           ]
         },
         "gettingStarted": {
           "slug": "/docs/getting-started",
-          "title": "Start local observation",
-          "summary": "The sequence for limiting a target and reviewing results in the foreground.",
+          "title": "Choose a capability and try it locally",
+          "summary": "Choose a repository and playground, then explore configuration and checks with synthetic inputs.",
           "sections": [
             {
-              "id": "define-root",
-              "title": "Define an observation root",
+              "id": "select",
+              "title": "Choose by purpose",
               "body": [
-                "Use dedicated configuration to set an absolute root, allowed kinds, depth, maximum items, and symlink policy. Do not target an entire home directory or an unresolved environment variable."
+                "Start with environment-deployment for plans, environment-operations for operator tools and inspection, port-office for the Debian base, and cloud-router for routing examples. Follow each project README and license."
               ]
             },
             {
-              "id": "run-foreground",
-              "title": "Review in the foreground",
+              "id": "synthetic",
+              "title": "Explore the playground workflow",
               "body": [
-                "Start with a read-only foreground inspection and review its receipt and warnings. Configure persistence or handoff to an upper system separately only after approving the result."
+                "The environment-planning playground demonstrates resolve, Incus rendering, plan, receipt recording and replay refusal using disposable synthetic inputs, without real accounts or production data."
+              ]
+            },
+            {
+              "id": "live",
+              "title": "Review live application separately",
+              "body": [
+                "Generated configuration and synthetic receipts do not prove a successful live operation. Cloud integration, real profiles, service installation, credential enrollment, Windows signing and timer activation require their own targets, permissions and acceptance."
               ]
             }
           ]
         },
         "security": {
           "slug": "/docs/security",
-          "title": "Local-observation security",
-          "summary": "Principles for filesystem boundaries, symlinks, and external transmission.",
+          "title": "Operation and inspection boundaries",
+          "summary": "Distinguish generation, inspection and live-operation permissions and scope.",
           "sections": [
             {
-              "id": "filesystem-safety",
-              "title": "Close the filesystem boundary",
+              "id": "scope",
+              "title": "Bound inspection scope",
               "body": [
-                "Paths outside allowed roots, symlink targets, special files, and oversized files are not followed by default. Observation needs no write permission and does not delete or move data."
+                "Inspection uses explicit roots and count, depth and content limits. WSL inspection covers its Linux namespace and selected mounts, not whole-host Windows security. Missing or stale observations remain incomplete."
               ]
             },
             {
-              "id": "no-upload",
-              "title": "No external upload",
+              "id": "ownership",
+              "title": "Configuration and live permissions",
               "body": [
-                "Neither this site nor default vPremises observation sends file lists or device data externally. When an upper product needs a result, explicitly hand over a minimized receipt through a versioned interface."
+                "Configuration generation does not require provider credentials. Live deployment and credential operations use owner-selected permissions and execution paths; real profiles and private keys stay out of public configuration."
+              ]
+            },
+            {
+              "id": "site",
+              "title": "What this site does",
+              "body": [
+                "This website explains OSS capabilities and public source. It does not log in to or change environments, inspect your device, or collect medical data."
               ]
             }
           ]
@@ -210,11 +266,11 @@
       },
       "privacy": {
         "label": "Privacy",
-        "summary": "The public site collects no device, filesystem, filename, or operating-state data. Exclude personal and customer folders from default local observation and retain only necessary metadata."
+        "summary": "This public site does not collect device information or environment configuration. Inspection results and operation ledgers remain in owner-selected local or private storage."
       },
       "contact": {
         "label": "vPremises contact",
-        "summary": "Report boundary or product issues through a verified channel identified on vpremises.com, sending only the version, OS, minimized configuration, and receipt. Redact real paths and documents."
+        "summary": "Use the owning public repository Issues for minimal reproduction steps. Do not share real profiles, credentials, detected secrets or customer/medical data."
       }
     }
   }
