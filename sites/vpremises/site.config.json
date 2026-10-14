@@ -15,23 +15,23 @@
   "content": {
     "ja": {
       "brand": "vPremises",
-      "tagline": "環境の計画・操作・保守を、役割の分かる構成へ。",
-      "summary": "vPremisesは環境schema・変更計画・receipt台帳と製品CLIを分離し、実設定は非公開の正本で保守します。Windows/Linuxのnative配布と、最小Debian Dockerベースの候補を提供し、実環境受入・定期保守の有効化は別段階で扱います。",
+      "tagline": "環境の運用を、見通せる構造へ。",
+      "summary": "環境の設定、変更計画、操作とその記録。vPremisesは、環境を扱う一連の流れを役割の分かる部品として構成します。",
       "features": [
         {
-          "id": "bounded-observation",
-          "title": "範囲を限定した観測",
-          "summary": "明示されたroot、深さ、件数、容量上限の内側だけを走査し、境界外を拒否します。"
+          "id": "focus-1",
+          "title": "環境の計画",
+          "summary": "設定とschemaから、環境の構造と変更計画を扱います。"
         },
         {
-          "id": "mount-boundary",
-          "title": "マウント境界",
-          "summary": "WSLから見えるWindows領域やSharePoint同期先を、原本の所有権を変えずに識別します。"
+          "id": "focus-2",
+          "title": "操作と記録",
+          "summary": "CLIによる操作と、変更の記録をつなぎます。"
         },
         {
-          "id": "operational-receipts",
-          "title": "観測Receipt",
-          "summary": "取得時刻、対象、件数、digest、警告を、内容そのものと分離した機械可読記録として返します。"
+          "id": "focus-3",
+          "title": "部品の責務",
+          "summary": "共通の基盤と、個別環境の設定を分けて保守します。"
         }
       ],
       "docs": {
@@ -117,23 +117,23 @@
     },
     "en": {
       "brand": "vPremises",
-      "tagline": "Explicit roles for environment planning, operations and maintenance.",
-      "summary": "vPremises separates environment schemas, plans and receipt ledgers from product CLIs; actual configurations stay private. Native Windows/Linux distribution and a minimal Debian Docker base candidate have independent release and acceptance paths. Live deployment and scheduled maintenance are separate stages.",
+      "tagline": "Make environment operations legible.",
+      "summary": "vPremises connects environment configuration, change plans, operations and records through components with explicit responsibilities.",
       "features": [
         {
-          "id": "bounded-observation",
-          "title": "Bounded observation",
-          "summary": "Scans only inside declared roots, depth, item-count, and size limits and rejects boundary escapes."
+          "id": "focus-1",
+          "title": "Plan environments",
+          "summary": "Work with environment structure and change plans through configuration and schemas."
         },
         {
-          "id": "mount-boundary",
-          "title": "Mount boundary",
-          "summary": "Identifies Windows areas visible from WSL and SharePoint-synchronized folders without changing source ownership."
+          "id": "focus-2",
+          "title": "Operate and record",
+          "summary": "Connect command-line operations with records of environment changes."
         },
         {
-          "id": "operational-receipts",
-          "title": "Observation receipts",
-          "summary": "Returns time, target, count, digest, and warnings as a machine-readable record separated from content."
+          "id": "focus-3",
+          "title": "Keep responsibilities clear",
+          "summary": "Maintain reusable foundations separately from individual environment configuration."
         }
       ],
       "docs": {
