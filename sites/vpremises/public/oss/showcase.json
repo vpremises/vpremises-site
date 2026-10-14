@@ -11,11 +11,11 @@
         "en": "port-office"
       },
       "summary": {
-        "ja": "非root・CA証明書を持つ最小Debian Dockerベース。0.1.0は未公開候補です。",
-        "en": "Minimal non-root Debian Docker base with CA trust. Version 0.1.0 is an unpublished candidate."
+        "ja": "Docker Bakeで管理する、非root・CA証明書付きの最小Debianベース。イメージ公開は別途受入。",
+        "en": "A minimal non-root Debian base with CA trust, maintained with Docker Bake. Image publication requires separate acceptance."
       },
       "repository": "https://github.com/vpremises/port-office",
-      "homepage": "https://hub.docker.com/u/coelaoss",
+      "homepage": "https://github.com/vpremises/port-office",
       "license": "Apache-2.0",
       "metrics": []
     },
@@ -59,8 +59,8 @@
         "en": "vpremises-site"
       },
       "summary": {
-        "ja": "vpremises/vpremises-site の公開ソース・利用情報。仕様、公開版、権利表示と検証範囲は正本のREADMEで確認できます。",
-        "en": "Explain local metadata observation and the management of user-controlled environments."
+        "ja": "環境構成・計画・検査・コンテナ基盤を紹介する日英サイト。",
+        "en": "A bilingual site explaining environment configuration, planning, inspection and container foundations."
       },
       "repository": "https://github.com/vpremises/vpremises-site",
       "homepage": "https://github.com/vpremises/vpremises-site",
@@ -75,12 +75,28 @@
         "en": "cloud-router"
       },
       "summary": {
-        "ja": "vpremises/cloud-router の公開ソース・利用情報。仕様、公開版、権利表示と検証範囲は正本のREADMEで確認できます。",
-        "en": "Study how a Swarm deployment can route application traffic through Traefik."
+        "ja": "Docker SwarmとTraefikのHTTP/HTTPSルーティング構成例と、ローカル設定検証。",
+        "en": "HTTP/HTTPS Docker Swarm and Traefik routing examples with local configuration validation."
       },
       "repository": "https://github.com/vpremises/cloud-router",
       "homepage": "https://github.com/vpremises/cloud-router",
       "license": "Apache-2.0",
+      "metrics": []
+    },
+    {
+      "id": "vpremises-azure-openemr",
+      "kind": "oss",
+      "name": {
+        "ja": "azure-openemr",
+        "en": "azure-openemr"
+      },
+      "summary": {
+        "ja": "OpenEMRのホスト配備とNGINX保護パスの検証例。Azureリソース作成は含みません。",
+        "en": "OpenEMR host-deployment and NGINX protected-path examples; no Azure resource provisioning."
+      },
+      "repository": "https://github.com/vpremises/azure-openemr",
+      "homepage": "https://github.com/vpremises/azure-openemr",
+      "license": "GPL-3.0",
       "metrics": []
     }
   ]
