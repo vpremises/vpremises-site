@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "site": "vpremises",
+  "source_file": "exec-4313a1e3-fe0e-4095-b695-05d1370fc725.png",
+  "sha256": "f900db180cd76f02d6d41d0378c1555114360cd2809264d06aeeadd448669b68",
+  "artwork": "User-provided generated artwork, copied without alteration",
+  "theme": {
+    "accent": "#087f78",
+    "paper": "#f3fbfa",
+    "ink": "#102d46"
+  }
+}
