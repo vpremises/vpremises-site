@@ -24,3 +24,7 @@ git push origin "$release_tag"
 初回tag pushだけがwrite可能。rerun/手動実行では既に同じsource/versionが配信されている場合のread-backのみ許可し、失敗を理由にdeployを自動再試行しない。古いversionへの切戻しは保存されたrollback versionとreceiptを確認した別操作として扱う。artifact/receiptは90日保存し、長期保存はこのrepoのRelease/保管経路へ移す。private sourceを公開に変更する操作は含まない。
 
 参考: [Cloudflare GitHub Actions](https://developers.cloudflare.com/workers/ci-cd/external-cicd/github-actions/)、[GitHub Environment](https://docs.github.com/en/actions/how-tos/deploy/configure-and-manage-deployments/manage-environments)。
+
+## source CIの確認
+
+マージ後は対象main commitのSite acceptance成功を確認してからタグを作る。CI実行が見当たらない場合、`gh workflow run site.yml --ref main` で読取専用の検証を手動起動できる。手動起動は診断用であり、公開gateが要求するmainへのpush CIの代わりにはしない。必要なpush CIが未取得なら公開を止め、GitHub上の実行状態と対象SHAを調査する。配備の再実行で解消しない。
