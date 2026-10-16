@@ -25,10 +25,6 @@
         {
           "title": "ドキュメント",
           "href": "/docs"
-        },
-        {
-          "title": "読みもの",
-          "href": "/journal"
         }
       ],
       "pages": [
@@ -38,8 +34,8 @@
           "summary": "構成を記述し、変更を計画し、結果を残す。ローカル環境と仮想化の運用を支える道具。",
           "sections": [
             {
-              "title": "目的から、次の一歩へ。",
-              "text": "関心のあるテーマから、機能と使い方をご覧ください。",
+              "title": "構成から運用までの道筋",
+              "text": "環境の設定、変更計画、CLIでの操作を分けて扱い、構築の手順と結果を確認します。",
               "links": [
                 {
                   "title": "構成から計画へ",
@@ -62,8 +58,8 @@
               ]
             },
             {
-              "title": "使い方をイメージする",
-              "text": "用途ごとに、取り組み方と選ぶ道具を整理しています。",
+              "title": "使う環境に合わせて実装を選ぶ",
+              "text": "Incus・Dockerの連携、環境操作CLI、Web配備例を、それぞれのソースとガイドから確認できます。",
               "links": [
                 {
                   "title": "活用シーンを見る",
@@ -311,8 +307,8 @@
         },
         {
           "path": "/use-cases",
-          "title": "使う場面から、考える。",
-          "summary": "目的に合わせて、情報の扱いと道具の選び方を整理します。",
+          "title": "環境の構築・変更・運用",
+          "summary": "各場面から、vPremisesの使い方と関連するガイドへ進めます。",
           "sections": [
             {
               "title": "構成から計画へ",
@@ -346,13 +342,13 @@
             }
           ],
           "kind": "page",
-          "label": "使う場面から、考える。",
+          "label": "環境の構築・変更・運用",
           "category": "",
           "status": "published"
         },
         {
           "path": "/oss",
-          "title": "目的に合った部品を探す",
+          "title": "vPremisesのライブラリ",
           "summary": "カテゴリとキーワードから、公開ライブラリとソースを探せます。",
           "sections": [],
           "kind": "catalog",
@@ -362,7 +358,7 @@
         },
         {
           "path": "/docs",
-          "title": "ガイドとドキュメント",
+          "title": "vPremisesのガイド",
           "summary": "機能別に、実装のREADMEと使い方を確認できます。",
           "sections": [
             {
@@ -415,7 +411,7 @@
             }
           ],
           "kind": "page",
-          "label": "ガイドとドキュメント",
+          "label": "vPremisesのガイド",
           "category": "",
           "status": "published"
         },
@@ -651,7 +647,11 @@
           "license": "GPL-3.0"
         }
       ],
-      "icon": "/brand/icon.png"
+      "icon": "/brand/icon.png",
+      "secondaryAction": {
+        "title": "導入・ドキュメント",
+        "href": "/docs"
+      }
     },
     "en": {
       "brand": "vPremises",
@@ -675,10 +675,6 @@
         {
           "title": "Docs",
           "href": "/docs"
-        },
-        {
-          "title": "Journal",
-          "href": "/journal"
         }
       ],
       "pages": [
@@ -688,8 +684,8 @@
           "summary": "Describe configuration, review changes and retain results with tools for local infrastructure and virtualization.",
           "sections": [
             {
-              "title": "Find your next step.",
-              "text": "Explore capabilities and guides by the work you want to do.",
+              "title": "From configuration to operations",
+              "text": "Explore environment configuration, change plans and CLI operations as distinct parts of building an environment.",
               "links": [
                 {
                   "title": "Configuration to plan",
@@ -712,8 +708,8 @@
               ]
             },
             {
-              "title": "Explore the possibilities",
-              "text": "Find a workflow and the tools that fit your use case.",
+              "title": "Choose implementations for your environment",
+              "text": "Inspect Incus and Docker integrations, operational CLIs and web deployment examples in their source and guides.",
               "links": [
                 {
                   "title": "Explore use cases",
@@ -961,8 +957,8 @@
         },
         {
           "path": "/use-cases",
-          "title": "Start with the work.",
-          "summary": "Explore approaches to organizing information and selecting tools.",
+          "title": "Build, change and operate environments",
+          "summary": "Explore vPremises through specific scenarios and related guides.",
           "sections": [
             {
               "title": "Configuration to plan",
@@ -996,13 +992,13 @@
             }
           ],
           "kind": "page",
-          "label": "Start with the work.",
+          "label": "Build, change and operate environments",
           "category": "",
           "status": "published"
         },
         {
           "path": "/oss",
-          "title": "Find the right building blocks",
+          "title": "vPremises libraries",
           "summary": "Browse public libraries and source by category and keyword.",
           "sections": [],
           "kind": "catalog",
@@ -1012,7 +1008,7 @@
         },
         {
           "path": "/docs",
-          "title": "Guides and documentation",
+          "title": "vPremises guides",
           "summary": "Find implementation READMEs and usage by capability.",
           "sections": [
             {
@@ -1065,7 +1061,7 @@
             }
           ],
           "kind": "page",
-          "label": "Guides and documentation",
+          "label": "vPremises guides",
           "category": "",
           "status": "published"
         },
@@ -1301,7 +1297,11 @@
           "license": "GPL-3.0"
         }
       ],
-      "icon": "/brand/icon.png"
+      "icon": "/brand/icon.png",
+      "secondaryAction": {
+        "title": "Setup & documentation",
+        "href": "/docs"
+      }
     }
   }
 }
