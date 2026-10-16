@@ -84,38 +84,75 @@
         {
           "path": "/capabilities",
           "title": "できること",
-          "summary": "構成を記述し、変更を計画し、結果を残す。ローカル環境と仮想化の運用を支える道具。",
+          "summary": "目的から機能を選び、対応するリポジトリと導入手順へ進めます。",
           "sections": [
             {
-              "title": "構成から計画へ",
-              "text": "環境設定とサービスの要件から、確認可能な変更計画を組み立てます。",
+              "title": "環境構成と計画",
+              "text": "環境の構成を型で表し、変更計画と結果の台帳を組み立てる。",
               "links": [
                 {
-                  "title": "詳しく読む",
-                  "href": "/capabilities/configuration",
-                  "icon": "/brand/icons/layers.svg"
+                  "title": "対応ライブラリと使い方",
+                  "href": "/capabilities/configuration"
+                },
+                {
+                  "title": "environment-deployment",
+                  "href": "https://github.com/vpremises/environment-deployment",
+                  "summary": "環境構成の型、変更計画・結果の台帳、Incus用OpenTofu構成生成を扱う。"
                 }
               ]
             },
             {
               "title": "コンテナと仮想化",
-              "text": "Incus向けのOpenTofu構成生成や、最小Debianベースの構築に取り組みます。",
+              "text": "Incus用の構成生成と、Docker BakeによるDebianベースの構築。",
               "links": [
                 {
-                  "title": "詳しく読む",
-                  "href": "/capabilities/virtualization",
-                  "icon": "/brand/icons/device.svg"
+                  "title": "対応ライブラリと使い方",
+                  "href": "/capabilities/virtualization"
+                },
+                {
+                  "title": "environment-deployment",
+                  "href": "https://github.com/vpremises/environment-deployment",
+                  "summary": "環境構成の型、変更計画・結果の台帳、Incus用OpenTofu構成生成を扱う。"
+                },
+                {
+                  "title": "port-office",
+                  "href": "https://github.com/vpremises/port-office",
+                  "summary": "Docker Bakeで最小Debianベースを構築するためのDockerソース。"
                 }
               ]
             },
             {
-              "title": "操作と記録",
-              "text": "CLIによる環境操作と、変更前後の確認・記録を一つの流れに整理します。",
+              "title": "環境操作のCLI",
+              "text": "環境の計画・検査・操作を行うCLIと、使い方を試すサンプル。",
               "links": [
                 {
-                  "title": "詳しく読む",
-                  "href": "/capabilities/operations",
-                  "icon": "/brand/icons/flow.svg"
+                  "title": "対応ライブラリと使い方",
+                  "href": "/capabilities/operations"
+                },
+                {
+                  "title": "environment-operations",
+                  "href": "https://github.com/vpremises/environment-operations",
+                  "summary": "環境の計画・検査・操作を行うCLIと、利用例を提供する。"
+                }
+              ]
+            },
+            {
+              "title": "Web配備の構成例",
+              "text": "ルーティングやOpenEMRの配備構成を検証し、用途に合わせて組み立てる。",
+              "links": [
+                {
+                  "title": "対応ライブラリと使い方",
+                  "href": "/capabilities/web-hosting"
+                },
+                {
+                  "title": "cloud-router",
+                  "href": "https://github.com/vpremises/cloud-router",
+                  "summary": "Docker SwarmとTraefikのHTTP・HTTPSルーティング構成例。"
+                },
+                {
+                  "title": "azure-openemr",
+                  "href": "https://github.com/vpremises/azure-openemr",
+                  "summary": "OpenEMRのホスト配備とNGINX設定を検証する構成例。"
                 }
               ]
             }
@@ -127,65 +164,96 @@
         },
         {
           "path": "/capabilities/configuration",
-          "title": "構成から計画へ",
-          "summary": "環境設定とサービスの要件から、確認可能な変更計画を組み立てます。",
+          "title": "環境構成と計画",
+          "summary": "環境の構成を型で表し、変更計画と結果の台帳を組み立てる。",
           "sections": [
             {
-              "title": "こんなときに",
-              "text": "目的と扱う情報を整理し、必要な機能から小さく組み合わせます。",
+              "title": "対応するリポジトリ",
+              "text": "用途に合う実装を選び、ソースとREADMEの導入手順を確認できます。",
               "links": [
                 {
-                  "title": "使い方を確認する",
-                  "href": "/docs/getting-started"
+                  "title": "environment-deployment",
+                  "href": "https://github.com/vpremises/environment-deployment",
+                  "summary": "環境構成の型、変更計画・結果の台帳、Incus用OpenTofu構成生成を扱う。"
                 }
               ]
             },
             {
-              "title": "次に進む",
-              "text": "使い方や関連するテーマを、ガイドで確認できます。",
+              "title": "導入手順を読む",
+              "text": "必要な環境・API・利用例は、各リポジトリのREADMEで確認できます。",
               "links": [
                 {
-                  "title": "活用シーン",
-                  "href": "/use-cases"
-                },
+                  "title": "environment-deployment — README",
+                  "href": "https://github.com/vpremises/environment-deployment/blob/main/README.md"
+                }
+              ]
+            },
+            {
+              "title": "ほかの機能を探す",
+              "text": "関連する機能とライブラリもご覧ください。",
+              "links": [
                 {
                   "title": "できること",
                   "href": "/capabilities"
+                },
+                {
+                  "title": "ライブラリ一覧",
+                  "href": "/oss"
                 }
               ]
             }
           ],
           "kind": "page",
-          "label": "構成から計画へ",
+          "label": "環境構成と計画",
           "category": "",
           "status": "published"
         },
         {
           "path": "/capabilities/virtualization",
           "title": "コンテナと仮想化",
-          "summary": "Incus向けのOpenTofu構成生成や、最小Debianベースの構築に取り組みます。",
+          "summary": "Incus用の構成生成と、Docker BakeによるDebianベースの構築。",
           "sections": [
             {
-              "title": "こんなときに",
-              "text": "目的と扱う情報を整理し、必要な機能から小さく組み合わせます。",
+              "title": "対応するリポジトリ",
+              "text": "用途に合う実装を選び、ソースとREADMEの導入手順を確認できます。",
               "links": [
                 {
-                  "title": "使い方を確認する",
-                  "href": "/docs/getting-started"
+                  "title": "environment-deployment",
+                  "href": "https://github.com/vpremises/environment-deployment",
+                  "summary": "環境構成の型、変更計画・結果の台帳、Incus用OpenTofu構成生成を扱う。"
+                },
+                {
+                  "title": "port-office",
+                  "href": "https://github.com/vpremises/port-office",
+                  "summary": "Docker Bakeで最小Debianベースを構築するためのDockerソース。"
                 }
               ]
             },
             {
-              "title": "次に進む",
-              "text": "使い方や関連するテーマを、ガイドで確認できます。",
+              "title": "導入手順を読む",
+              "text": "必要な環境・API・利用例は、各リポジトリのREADMEで確認できます。",
               "links": [
                 {
-                  "title": "活用シーン",
-                  "href": "/use-cases"
+                  "title": "environment-deployment — README",
+                  "href": "https://github.com/vpremises/environment-deployment/blob/main/README.md"
                 },
+                {
+                  "title": "port-office — README",
+                  "href": "https://github.com/vpremises/port-office/blob/main/README.md"
+                }
+              ]
+            },
+            {
+              "title": "ほかの機能を探す",
+              "text": "関連する機能とライブラリもご覧ください。",
+              "links": [
                 {
                   "title": "できること",
                   "href": "/capabilities"
+                },
+                {
+                  "title": "ライブラリ一覧",
+                  "href": "/oss"
                 }
               ]
             }
@@ -197,36 +265,47 @@
         },
         {
           "path": "/capabilities/operations",
-          "title": "操作と記録",
-          "summary": "CLIによる環境操作と、変更前後の確認・記録を一つの流れに整理します。",
+          "title": "環境操作のCLI",
+          "summary": "環境の計画・検査・操作を行うCLIと、使い方を試すサンプル。",
           "sections": [
             {
-              "title": "こんなときに",
-              "text": "目的と扱う情報を整理し、必要な機能から小さく組み合わせます。",
+              "title": "対応するリポジトリ",
+              "text": "用途に合う実装を選び、ソースとREADMEの導入手順を確認できます。",
               "links": [
                 {
-                  "title": "使い方を確認する",
-                  "href": "/docs/getting-started"
+                  "title": "environment-operations",
+                  "href": "https://github.com/vpremises/environment-operations",
+                  "summary": "環境の計画・検査・操作を行うCLIと、利用例を提供する。"
                 }
               ]
             },
             {
-              "title": "次に進む",
-              "text": "使い方や関連するテーマを、ガイドで確認できます。",
+              "title": "導入手順を読む",
+              "text": "必要な環境・API・利用例は、各リポジトリのREADMEで確認できます。",
               "links": [
                 {
-                  "title": "活用シーン",
-                  "href": "/use-cases"
-                },
+                  "title": "environment-operations — README",
+                  "href": "https://github.com/vpremises/environment-operations/blob/main/README.md"
+                }
+              ]
+            },
+            {
+              "title": "ほかの機能を探す",
+              "text": "関連する機能とライブラリもご覧ください。",
+              "links": [
                 {
                   "title": "できること",
                   "href": "/capabilities"
+                },
+                {
+                  "title": "ライブラリ一覧",
+                  "href": "/oss"
                 }
               ]
             }
           ],
           "kind": "page",
-          "label": "操作と記録",
+          "label": "環境操作のCLI",
           "category": "",
           "status": "published"
         },
@@ -240,9 +319,8 @@
               "text": "環境設定とサービスの要件から、確認可能な変更計画を組み立てます。",
               "links": [
                 {
-                  "title": "機能を見る",
-                  "href": "/capabilities/configuration",
-                  "icon": "/brand/icons/layers.svg"
+                  "title": "実装を選ぶ：environment-deployment",
+                  "href": "/capabilities/configuration"
                 }
               ]
             },
@@ -251,9 +329,8 @@
               "text": "Incus向けのOpenTofu構成生成や、最小Debianベースの構築に取り組みます。",
               "links": [
                 {
-                  "title": "機能を見る",
-                  "href": "/capabilities/virtualization",
-                  "icon": "/brand/icons/device.svg"
+                  "title": "実装を選ぶ：environment-deployment, port-office",
+                  "href": "/capabilities/virtualization"
                 }
               ]
             },
@@ -262,9 +339,8 @@
               "text": "CLIによる環境操作と、変更前後の確認・記録を一つの流れに整理します。",
               "links": [
                 {
-                  "title": "機能を見る",
-                  "href": "/capabilities/operations",
-                  "icon": "/brand/icons/flow.svg"
+                  "title": "実装を選ぶ：environment-operations",
+                  "href": "/capabilities/operations"
                 }
               ]
             }
@@ -287,19 +363,53 @@
         {
           "path": "/docs",
           "title": "ガイドとドキュメント",
-          "summary": "目的に合わせて、使い方と設計の考え方を確認できます。",
+          "summary": "機能別に、実装のREADMEと使い方を確認できます。",
           "sections": [
             {
-              "title": "はじめの一歩",
-              "text": "目的を確認し、必要な機能から始めましょう。",
+              "title": "環境構成と計画",
+              "text": "環境の構成を型で表し、変更計画と結果の台帳を組み立てる。",
               "links": [
                 {
-                  "title": "導入ガイド",
-                  "href": "/docs/getting-started"
+                  "title": "environment-deployment — README",
+                  "href": "https://github.com/vpremises/environment-deployment/blob/main/README.md"
+                }
+              ]
+            },
+            {
+              "title": "コンテナと仮想化",
+              "text": "Incus用の構成生成と、Docker BakeによるDebianベースの構築。",
+              "links": [
+                {
+                  "title": "environment-deployment — README",
+                  "href": "https://github.com/vpremises/environment-deployment/blob/main/README.md"
                 },
                 {
-                  "title": "安全に使うために",
-                  "href": "/security"
+                  "title": "port-office — README",
+                  "href": "https://github.com/vpremises/port-office/blob/main/README.md"
+                }
+              ]
+            },
+            {
+              "title": "環境操作のCLI",
+              "text": "環境の計画・検査・操作を行うCLIと、使い方を試すサンプル。",
+              "links": [
+                {
+                  "title": "environment-operations — README",
+                  "href": "https://github.com/vpremises/environment-operations/blob/main/README.md"
+                }
+              ]
+            },
+            {
+              "title": "Web配備の構成例",
+              "text": "ルーティングやOpenEMRの配備構成を検証し、用途に合わせて組み立てる。",
+              "links": [
+                {
+                  "title": "cloud-router — README",
+                  "href": "https://github.com/vpremises/cloud-router/blob/main/README.md"
+                },
+                {
+                  "title": "azure-openemr — README",
+                  "href": "https://github.com/vpremises/azure-openemr/blob/main/README.md"
                 }
               ]
             }
@@ -315,19 +425,48 @@
           "summary": "機能、使う場面、データの扱いを確認するためのガイドです。",
           "sections": [
             {
-              "title": "目的を選ぶ",
-              "text": "取り組む内容を機能や用途のページで確認します。",
+              "title": "目的に合う実装を選ぶ",
+              "text": "機能ごとにリポジトリと使い方を確認します。",
               "links": [
                 {
-                  "title": "できること",
-                  "href": "/capabilities"
+                  "title": "環境構成と計画",
+                  "href": "/capabilities/configuration"
+                },
+                {
+                  "title": "コンテナと仮想化",
+                  "href": "/capabilities/virtualization"
+                },
+                {
+                  "title": "環境操作のCLI",
+                  "href": "/capabilities/operations"
+                },
+                {
+                  "title": "Web配備の構成例",
+                  "href": "/capabilities/web-hosting"
                 }
               ]
             },
             {
-              "title": "利用条件を確認する",
-              "text": "導入するソフトウェアの対応環境、ライセンス、提供版を確認してください。",
-              "links": []
+              "title": "READMEから始める",
+              "text": "環境の準備・利用例・検証コマンドを確認してから導入してください。",
+              "links": [
+                {
+                  "title": "environment-deployment — README",
+                  "href": "https://github.com/vpremises/environment-deployment/blob/main/README.md"
+                },
+                {
+                  "title": "environment-deployment — README",
+                  "href": "https://github.com/vpremises/environment-deployment/blob/main/README.md"
+                },
+                {
+                  "title": "environment-operations — README",
+                  "href": "https://github.com/vpremises/environment-operations/blob/main/README.md"
+                },
+                {
+                  "title": "cloud-router — README",
+                  "href": "https://github.com/vpremises/cloud-router/blob/main/README.md"
+                }
+              ]
             }
           ],
           "kind": "page",
@@ -411,49 +550,104 @@
           "label": "サイトマップ",
           "category": "",
           "status": "published"
+        },
+        {
+          "path": "/capabilities/web-hosting",
+          "title": "Web配備の構成例",
+          "summary": "ルーティングやOpenEMRの配備構成を検証し、用途に合わせて組み立てる。",
+          "sections": [
+            {
+              "title": "対応するリポジトリ",
+              "text": "用途に合う実装を選び、ソースとREADMEの導入手順を確認できます。",
+              "links": [
+                {
+                  "title": "cloud-router",
+                  "href": "https://github.com/vpremises/cloud-router",
+                  "summary": "Docker SwarmとTraefikのHTTP・HTTPSルーティング構成例。"
+                },
+                {
+                  "title": "azure-openemr",
+                  "href": "https://github.com/vpremises/azure-openemr",
+                  "summary": "OpenEMRのホスト配備とNGINX設定を検証する構成例。"
+                }
+              ]
+            },
+            {
+              "title": "導入手順を読む",
+              "text": "必要な環境・API・利用例は、各リポジトリのREADMEで確認できます。",
+              "links": [
+                {
+                  "title": "cloud-router — README",
+                  "href": "https://github.com/vpremises/cloud-router/blob/main/README.md"
+                },
+                {
+                  "title": "azure-openemr — README",
+                  "href": "https://github.com/vpremises/azure-openemr/blob/main/README.md"
+                }
+              ]
+            },
+            {
+              "title": "ほかの機能を探す",
+              "text": "関連する機能とライブラリもご覧ください。",
+              "links": [
+                {
+                  "title": "できること",
+                  "href": "/capabilities"
+                },
+                {
+                  "title": "ライブラリ一覧",
+                  "href": "/oss"
+                }
+              ]
+            }
+          ],
+          "kind": "page",
+          "label": "Web配備の構成例",
+          "category": "",
+          "status": "published"
         }
       ],
       "resources": [
         {
           "title": "port-office",
-          "summary": "Docker Bakeで管理する、非root・CA証明書付きの最小Debianベース。イメージ公開は別途受入。",
+          "summary": "Docker Bakeで最小Debianベースを構築するためのDockerソース。",
           "href": "https://github.com/vpremises/port-office",
-          "category": "外部連携",
+          "category": "コンテナと仮想化",
           "license": "Apache-2.0"
         },
         {
           "title": "environment-operations",
-          "summary": "環境計画CLI、security inspector、Windows custody helperと製品playground。",
+          "summary": "環境の計画・検査・操作を行うCLIと、利用例を提供する。",
           "href": "https://github.com/vpremises/environment-operations",
-          "category": "外部連携",
+          "category": "環境操作のCLI",
           "license": "Apache-2.0"
         },
         {
           "title": "environment-deployment",
-          "summary": "環境schema、resolver、plan/receipt台帳とIncus renderer。実profileは含みません。",
+          "summary": "環境構成の型、変更計画・結果の台帳、Incus用OpenTofu構成生成を扱う。",
           "href": "https://github.com/vpremises/environment-deployment",
-          "category": "外部連携",
+          "category": "環境構成と計画",
           "license": "Apache-2.0"
         },
         {
           "title": "vpremises-site",
-          "summary": "環境構成・計画・検査・コンテナ基盤を紹介する日英サイト。",
+          "summary": "vPremisesの環境構成・運用ツールを紹介するサイトのソース。",
           "href": "https://github.com/vpremises/vpremises-site",
-          "category": "外部連携",
+          "category": "プロジェクト情報",
           "license": "Apache-2.0"
         },
         {
           "title": "cloud-router",
-          "summary": "Docker SwarmとTraefikのHTTP/HTTPSルーティング構成例と、ローカル設定検証。",
+          "summary": "Docker SwarmとTraefikのHTTP・HTTPSルーティング構成例。",
           "href": "https://github.com/vpremises/cloud-router",
-          "category": "外部連携",
+          "category": "Web配備の構成例",
           "license": "Apache-2.0"
         },
         {
           "title": "azure-openemr",
-          "summary": "OpenEMRのホスト配備とNGINX保護パスの検証例。Azureリソース作成は含みません。",
+          "summary": "OpenEMRのホスト配備とNGINX設定を検証する構成例。",
           "href": "https://github.com/vpremises/azure-openemr",
-          "category": "外部連携",
+          "category": "Web配備の構成例",
           "license": "GPL-3.0"
         }
       ],
@@ -540,38 +734,75 @@
         {
           "path": "/capabilities",
           "title": "Explore the toolkit",
-          "summary": "Describe configuration, review changes and retain results with tools for local infrastructure and virtualization.",
+          "summary": "Choose a capability and continue to its repositories and setup instructions.",
           "sections": [
             {
-              "title": "Configuration to plan",
-              "text": "Turn environment settings and service requirements into reviewable change plans.",
+              "title": "Configuration and planning",
+              "text": "Describe typed environment configurations and calculate plans and receipt ledgers.",
               "links": [
                 {
-                  "title": "Explore the capability",
-                  "href": "/capabilities/configuration",
-                  "icon": "/brand/icons/layers.svg"
+                  "title": "Libraries and usage",
+                  "href": "/capabilities/configuration"
+                },
+                {
+                  "title": "environment-deployment",
+                  "href": "https://github.com/vpremises/environment-deployment",
+                  "summary": "Environment schemas, resolution, plan/receipt ledgers and Incus rendering; no actual profiles."
                 }
               ]
             },
             {
               "title": "Containers and virtualization",
-              "text": "Work with Incus-oriented OpenTofu generation and minimal Debian base images.",
+              "text": "Generate Incus configuration and build a Debian base with Docker Bake.",
               "links": [
                 {
-                  "title": "Explore the capability",
-                  "href": "/capabilities/virtualization",
-                  "icon": "/brand/icons/device.svg"
+                  "title": "Libraries and usage",
+                  "href": "/capabilities/virtualization"
+                },
+                {
+                  "title": "environment-deployment",
+                  "href": "https://github.com/vpremises/environment-deployment",
+                  "summary": "Environment schemas, resolution, plan/receipt ledgers and Incus rendering; no actual profiles."
+                },
+                {
+                  "title": "port-office",
+                  "href": "https://github.com/vpremises/port-office",
+                  "summary": "A minimal non-root Debian base with CA trust, maintained with Docker Bake. Image publication requires separate acceptance."
                 }
               ]
             },
             {
-              "title": "Operations and records",
-              "text": "Keep command-line operations, checks and change receipts in a clear workflow.",
+              "title": "Environment operations",
+              "text": "Use CLI tools and examples for environment planning, inspection and operations.",
               "links": [
                 {
-                  "title": "Explore the capability",
-                  "href": "/capabilities/operations",
-                  "icon": "/brand/icons/flow.svg"
+                  "title": "Libraries and usage",
+                  "href": "/capabilities/operations"
+                },
+                {
+                  "title": "environment-operations",
+                  "href": "https://github.com/vpremises/environment-operations",
+                  "summary": "Product planning CLI, security inspector, Windows custody helper and playgrounds."
+                }
+              ]
+            },
+            {
+              "title": "Web hosting examples",
+              "text": "Inspect routing and OpenEMR host-deployment configurations before adapting them.",
+              "links": [
+                {
+                  "title": "Libraries and usage",
+                  "href": "/capabilities/web-hosting"
+                },
+                {
+                  "title": "cloud-router",
+                  "href": "https://github.com/vpremises/cloud-router",
+                  "summary": "HTTP/HTTPS Docker Swarm and Traefik routing examples with local configuration validation."
+                },
+                {
+                  "title": "azure-openemr",
+                  "href": "https://github.com/vpremises/azure-openemr",
+                  "summary": "OpenEMR host-deployment and NGINX protected-path examples; no Azure resource provisioning."
                 }
               ]
             }
@@ -583,65 +814,96 @@
         },
         {
           "path": "/capabilities/configuration",
-          "title": "Configuration to plan",
-          "summary": "Turn environment settings and service requirements into reviewable change plans.",
+          "title": "Configuration and planning",
+          "summary": "Describe typed environment configurations and calculate plans and receipt ledgers.",
           "sections": [
             {
-              "title": "When to use it",
-              "text": "Start with the information and outcome you need, then combine focused capabilities.",
+              "title": "Repositories for this capability",
+              "text": "Choose an implementation and open its source and README to get started.",
               "links": [
                 {
-                  "title": "Read the guide",
-                  "href": "/docs/getting-started"
+                  "title": "environment-deployment",
+                  "href": "https://github.com/vpremises/environment-deployment",
+                  "summary": "Environment schemas, resolution, plan/receipt ledgers and Incus rendering; no actual profiles."
                 }
               ]
             },
             {
-              "title": "Next steps",
-              "text": "Explore the guides and related topics.",
+              "title": "Read the setup instructions",
+              "text": "Each repository README describes prerequisites, interfaces and examples.",
               "links": [
                 {
-                  "title": "Use cases",
-                  "href": "/use-cases"
-                },
+                  "title": "environment-deployment — README",
+                  "href": "https://github.com/vpremises/environment-deployment/blob/main/README.md"
+                }
+              ]
+            },
+            {
+              "title": "Explore other capabilities",
+              "text": "Browse related capabilities and the full library.",
+              "links": [
                 {
                   "title": "Explore the toolkit",
                   "href": "/capabilities"
+                },
+                {
+                  "title": "All libraries",
+                  "href": "/oss"
                 }
               ]
             }
           ],
           "kind": "page",
-          "label": "Configuration to plan",
+          "label": "Configuration and planning",
           "category": "",
           "status": "published"
         },
         {
           "path": "/capabilities/virtualization",
           "title": "Containers and virtualization",
-          "summary": "Work with Incus-oriented OpenTofu generation and minimal Debian base images.",
+          "summary": "Generate Incus configuration and build a Debian base with Docker Bake.",
           "sections": [
             {
-              "title": "When to use it",
-              "text": "Start with the information and outcome you need, then combine focused capabilities.",
+              "title": "Repositories for this capability",
+              "text": "Choose an implementation and open its source and README to get started.",
               "links": [
                 {
-                  "title": "Read the guide",
-                  "href": "/docs/getting-started"
+                  "title": "environment-deployment",
+                  "href": "https://github.com/vpremises/environment-deployment",
+                  "summary": "Environment schemas, resolution, plan/receipt ledgers and Incus rendering; no actual profiles."
+                },
+                {
+                  "title": "port-office",
+                  "href": "https://github.com/vpremises/port-office",
+                  "summary": "A minimal non-root Debian base with CA trust, maintained with Docker Bake. Image publication requires separate acceptance."
                 }
               ]
             },
             {
-              "title": "Next steps",
-              "text": "Explore the guides and related topics.",
+              "title": "Read the setup instructions",
+              "text": "Each repository README describes prerequisites, interfaces and examples.",
               "links": [
                 {
-                  "title": "Use cases",
-                  "href": "/use-cases"
+                  "title": "environment-deployment — README",
+                  "href": "https://github.com/vpremises/environment-deployment/blob/main/README.md"
                 },
+                {
+                  "title": "port-office — README",
+                  "href": "https://github.com/vpremises/port-office/blob/main/README.md"
+                }
+              ]
+            },
+            {
+              "title": "Explore other capabilities",
+              "text": "Browse related capabilities and the full library.",
+              "links": [
                 {
                   "title": "Explore the toolkit",
                   "href": "/capabilities"
+                },
+                {
+                  "title": "All libraries",
+                  "href": "/oss"
                 }
               ]
             }
@@ -653,36 +915,47 @@
         },
         {
           "path": "/capabilities/operations",
-          "title": "Operations and records",
-          "summary": "Keep command-line operations, checks and change receipts in a clear workflow.",
+          "title": "Environment operations",
+          "summary": "Use CLI tools and examples for environment planning, inspection and operations.",
           "sections": [
             {
-              "title": "When to use it",
-              "text": "Start with the information and outcome you need, then combine focused capabilities.",
+              "title": "Repositories for this capability",
+              "text": "Choose an implementation and open its source and README to get started.",
               "links": [
                 {
-                  "title": "Read the guide",
-                  "href": "/docs/getting-started"
+                  "title": "environment-operations",
+                  "href": "https://github.com/vpremises/environment-operations",
+                  "summary": "Product planning CLI, security inspector, Windows custody helper and playgrounds."
                 }
               ]
             },
             {
-              "title": "Next steps",
-              "text": "Explore the guides and related topics.",
+              "title": "Read the setup instructions",
+              "text": "Each repository README describes prerequisites, interfaces and examples.",
               "links": [
                 {
-                  "title": "Use cases",
-                  "href": "/use-cases"
-                },
+                  "title": "environment-operations — README",
+                  "href": "https://github.com/vpremises/environment-operations/blob/main/README.md"
+                }
+              ]
+            },
+            {
+              "title": "Explore other capabilities",
+              "text": "Browse related capabilities and the full library.",
+              "links": [
                 {
                   "title": "Explore the toolkit",
                   "href": "/capabilities"
+                },
+                {
+                  "title": "All libraries",
+                  "href": "/oss"
                 }
               ]
             }
           ],
           "kind": "page",
-          "label": "Operations and records",
+          "label": "Environment operations",
           "category": "",
           "status": "published"
         },
@@ -696,9 +969,8 @@
               "text": "Turn environment settings and service requirements into reviewable change plans.",
               "links": [
                 {
-                  "title": "Explore the capability",
-                  "href": "/capabilities/configuration",
-                  "icon": "/brand/icons/layers.svg"
+                  "title": "Choose: environment-deployment",
+                  "href": "/capabilities/configuration"
                 }
               ]
             },
@@ -707,9 +979,8 @@
               "text": "Work with Incus-oriented OpenTofu generation and minimal Debian base images.",
               "links": [
                 {
-                  "title": "Explore the capability",
-                  "href": "/capabilities/virtualization",
-                  "icon": "/brand/icons/device.svg"
+                  "title": "Choose: environment-deployment, port-office",
+                  "href": "/capabilities/virtualization"
                 }
               ]
             },
@@ -718,9 +989,8 @@
               "text": "Keep command-line operations, checks and change receipts in a clear workflow.",
               "links": [
                 {
-                  "title": "Explore the capability",
-                  "href": "/capabilities/operations",
-                  "icon": "/brand/icons/flow.svg"
+                  "title": "Choose: environment-operations",
+                  "href": "/capabilities/operations"
                 }
               ]
             }
@@ -743,19 +1013,53 @@
         {
           "path": "/docs",
           "title": "Guides and documentation",
-          "summary": "Explore usage guides and design principles.",
+          "summary": "Find implementation READMEs and usage by capability.",
           "sections": [
             {
-              "title": "Getting started",
-              "text": "Start with your goal and the capabilities you need.",
+              "title": "Configuration and planning",
+              "text": "Describe typed environment configurations and calculate plans and receipt ledgers.",
               "links": [
                 {
-                  "title": "Getting started",
-                  "href": "/docs/getting-started"
+                  "title": "environment-deployment — README",
+                  "href": "https://github.com/vpremises/environment-deployment/blob/main/README.md"
+                }
+              ]
+            },
+            {
+              "title": "Containers and virtualization",
+              "text": "Generate Incus configuration and build a Debian base with Docker Bake.",
+              "links": [
+                {
+                  "title": "environment-deployment — README",
+                  "href": "https://github.com/vpremises/environment-deployment/blob/main/README.md"
                 },
                 {
-                  "title": "Security guide",
-                  "href": "/security"
+                  "title": "port-office — README",
+                  "href": "https://github.com/vpremises/port-office/blob/main/README.md"
+                }
+              ]
+            },
+            {
+              "title": "Environment operations",
+              "text": "Use CLI tools and examples for environment planning, inspection and operations.",
+              "links": [
+                {
+                  "title": "environment-operations — README",
+                  "href": "https://github.com/vpremises/environment-operations/blob/main/README.md"
+                }
+              ]
+            },
+            {
+              "title": "Web hosting examples",
+              "text": "Inspect routing and OpenEMR host-deployment configurations before adapting them.",
+              "links": [
+                {
+                  "title": "cloud-router — README",
+                  "href": "https://github.com/vpremises/cloud-router/blob/main/README.md"
+                },
+                {
+                  "title": "azure-openemr — README",
+                  "href": "https://github.com/vpremises/azure-openemr/blob/main/README.md"
                 }
               ]
             }
@@ -771,19 +1075,48 @@
           "summary": "A guide to capabilities, use cases and data boundaries.",
           "sections": [
             {
-              "title": "Choose a goal",
-              "text": "Explore the capability or use-case pages for the work you have in mind.",
+              "title": "Choose an implementation",
+              "text": "Find repositories and usage for each capability.",
               "links": [
                 {
-                  "title": "Explore the toolkit",
-                  "href": "/capabilities"
+                  "title": "Configuration and planning",
+                  "href": "/capabilities/configuration"
+                },
+                {
+                  "title": "Containers and virtualization",
+                  "href": "/capabilities/virtualization"
+                },
+                {
+                  "title": "Environment operations",
+                  "href": "/capabilities/operations"
+                },
+                {
+                  "title": "Web hosting examples",
+                  "href": "/capabilities/web-hosting"
                 }
               ]
             },
             {
-              "title": "Review usage conditions",
-              "text": "Check the supported environment, license and available release of the software you select.",
-              "links": []
+              "title": "Start with the README",
+              "text": "Check prerequisites, examples and verification commands before adoption.",
+              "links": [
+                {
+                  "title": "environment-deployment — README",
+                  "href": "https://github.com/vpremises/environment-deployment/blob/main/README.md"
+                },
+                {
+                  "title": "environment-deployment — README",
+                  "href": "https://github.com/vpremises/environment-deployment/blob/main/README.md"
+                },
+                {
+                  "title": "environment-operations — README",
+                  "href": "https://github.com/vpremises/environment-operations/blob/main/README.md"
+                },
+                {
+                  "title": "cloud-router — README",
+                  "href": "https://github.com/vpremises/cloud-router/blob/main/README.md"
+                }
+              ]
             }
           ],
           "kind": "page",
@@ -867,6 +1200,61 @@
           "label": "Sitemap",
           "category": "",
           "status": "published"
+        },
+        {
+          "path": "/capabilities/web-hosting",
+          "title": "Web hosting examples",
+          "summary": "Inspect routing and OpenEMR host-deployment configurations before adapting them.",
+          "sections": [
+            {
+              "title": "Repositories for this capability",
+              "text": "Choose an implementation and open its source and README to get started.",
+              "links": [
+                {
+                  "title": "cloud-router",
+                  "href": "https://github.com/vpremises/cloud-router",
+                  "summary": "HTTP/HTTPS Docker Swarm and Traefik routing examples with local configuration validation."
+                },
+                {
+                  "title": "azure-openemr",
+                  "href": "https://github.com/vpremises/azure-openemr",
+                  "summary": "OpenEMR host-deployment and NGINX protected-path examples; no Azure resource provisioning."
+                }
+              ]
+            },
+            {
+              "title": "Read the setup instructions",
+              "text": "Each repository README describes prerequisites, interfaces and examples.",
+              "links": [
+                {
+                  "title": "cloud-router — README",
+                  "href": "https://github.com/vpremises/cloud-router/blob/main/README.md"
+                },
+                {
+                  "title": "azure-openemr — README",
+                  "href": "https://github.com/vpremises/azure-openemr/blob/main/README.md"
+                }
+              ]
+            },
+            {
+              "title": "Explore other capabilities",
+              "text": "Browse related capabilities and the full library.",
+              "links": [
+                {
+                  "title": "Explore the toolkit",
+                  "href": "/capabilities"
+                },
+                {
+                  "title": "All libraries",
+                  "href": "/oss"
+                }
+              ]
+            }
+          ],
+          "kind": "page",
+          "label": "Web hosting examples",
+          "category": "",
+          "status": "published"
         }
       ],
       "resources": [
@@ -874,42 +1262,42 @@
           "title": "port-office",
           "summary": "A minimal non-root Debian base with CA trust, maintained with Docker Bake. Image publication requires separate acceptance.",
           "href": "https://github.com/vpremises/port-office",
-          "category": "Integrations",
+          "category": "Containers and virtualization",
           "license": "Apache-2.0"
         },
         {
           "title": "environment-operations",
           "summary": "Product planning CLI, security inspector, Windows custody helper and playgrounds.",
           "href": "https://github.com/vpremises/environment-operations",
-          "category": "Integrations",
+          "category": "Environment operations",
           "license": "Apache-2.0"
         },
         {
           "title": "environment-deployment",
           "summary": "Environment schemas, resolution, plan/receipt ledgers and Incus rendering; no actual profiles.",
           "href": "https://github.com/vpremises/environment-deployment",
-          "category": "Integrations",
+          "category": "Configuration and planning",
           "license": "Apache-2.0"
         },
         {
           "title": "vpremises-site",
           "summary": "A bilingual site explaining environment configuration, planning, inspection and container foundations.",
           "href": "https://github.com/vpremises/vpremises-site",
-          "category": "Integrations",
+          "category": "Project information",
           "license": "Apache-2.0"
         },
         {
           "title": "cloud-router",
           "summary": "HTTP/HTTPS Docker Swarm and Traefik routing examples with local configuration validation.",
           "href": "https://github.com/vpremises/cloud-router",
-          "category": "Integrations",
+          "category": "Web hosting examples",
           "license": "Apache-2.0"
         },
         {
           "title": "azure-openemr",
           "summary": "OpenEMR host-deployment and NGINX protected-path examples; no Azure resource provisioning.",
           "href": "https://github.com/vpremises/azure-openemr",
-          "category": "Integrations",
+          "category": "Web hosting examples",
           "license": "GPL-3.0"
         }
       ],
