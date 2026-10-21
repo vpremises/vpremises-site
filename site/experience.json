@@ -1,0 +1,100 @@
+{
+  "ja": {
+    "category": "環境づくりと運用の道具",
+    "primary": {
+      "href": "/use-cases",
+      "title": "用途から探す"
+    },
+    "secondary": {
+      "href": "/oss",
+      "title": "ツールを見る"
+    },
+    "pathsTitle": "何をお探しですか？",
+    "paths": [
+      {
+        "href": "/capabilities/configuration",
+        "title": "環境を構成する",
+        "summary": "構成と変更の計画を確認"
+      },
+      {
+        "href": "/capabilities/virtualization",
+        "title": "仮想化の部品を選ぶ",
+        "summary": "コンテナ・VMの利用へ"
+      },
+      {
+        "href": "/capabilities/operations",
+        "title": "環境を運用する",
+        "summary": "状態を確認するCLIへ"
+      }
+    ],
+    "preview": {
+      "kind": "environment",
+      "label": "使い方のイメージ",
+      "title": "構成を知る。変更を確かめる。",
+      "rows": [
+        {
+          "label": "環境構成",
+          "detail": "何を、どこに置くか"
+        },
+        {
+          "label": "導入と変更",
+          "detail": "差分と手順を確認する"
+        },
+        {
+          "label": "運用",
+          "detail": "状態と結果を確かめる"
+        }
+      ],
+      "outcome": "用途に合う、独立したOSSを選ぶ。"
+    }
+  },
+  "en": {
+    "category": "Tools for environments and operations",
+    "primary": {
+      "href": "/use-cases",
+      "title": "Explore use cases"
+    },
+    "secondary": {
+      "href": "/oss",
+      "title": "Browse tools"
+    },
+    "pathsTitle": "What brings you here?",
+    "paths": [
+      {
+        "href": "/capabilities/configuration",
+        "title": "Plan an environment",
+        "summary": "Review configuration and change plans"
+      },
+      {
+        "href": "/capabilities/virtualization",
+        "title": "Choose virtualization tools",
+        "summary": "Explore containers and virtual machines"
+      },
+      {
+        "href": "/capabilities/operations",
+        "title": "Operate environments",
+        "summary": "Find CLI tools for inspecting state"
+      }
+    ],
+    "preview": {
+      "kind": "environment",
+      "label": "Workflow illustration",
+      "title": "Understand configuration. Review change.",
+      "rows": [
+        {
+          "label": "Configuration",
+          "detail": "What belongs where?"
+        },
+        {
+          "label": "Setup & change",
+          "detail": "Review the differences and steps"
+        },
+        {
+          "label": "Operations",
+          "detail": "Inspect state and results"
+        }
+      ],
+      "outcome": "Choose independent tools for the task."
+    }
+  }
+}
