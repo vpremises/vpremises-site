@@ -9,7 +9,6 @@
 | environment-operations/apps/environment-plan/src/main.rs | resolve/plan/make-receipt/record/render-maintenance CLI | 合成receiptは実適用の証明ではない |
 | environment-operations/apps/security-inspector/src/cli | doctor/observe/audit/report/OSS検査、限定された内容・ネットワークの収集器連携 | root/検出器/namespace/上限を明示、全端末認証ではない |
 | environment-operations/native/windows-custody-helper | Windows custody helper実行ファイル | 署名・WSL接続・実資格情報登録は独立受入 |
-| port-office/images/debian/Dockerfile | Debian最小OS、非root、CA trust、UTF-8、UTC | Python/Node/製品を同梱せず、GHCR公開前の候補 |
 | cloud-router/*/compose*.yaml | Docker Swarm/TraefikのHTTP/HTTPS例、制限したDocker APIとdigest検証 | 実stack起動・TLS発行・運用は別 |
 | azure-openemr | OpenEMRホスト配備とNGINX保護ディレクトリの回帰検証 | Azure自動構築、医療サービス本番運用の保証はしない |
 

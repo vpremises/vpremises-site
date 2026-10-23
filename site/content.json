@@ -46,7 +46,7 @@
                 {
                   "title": "コンテナと仮想化",
                   "href": "/capabilities/virtualization",
-                  "summary": "Incus向けのOpenTofu構成生成や、最小Debianベースの構築に取り組みます。",
+                  "summary": "Incus向けのOpenTofu構成生成と、環境要件・変更計画の検証を支援します。",
                   "icon": "/brand/icons/device.svg"
                 },
                 {
@@ -99,7 +99,7 @@
             },
             {
               "title": "コンテナと仮想化",
-              "text": "Incus用の構成生成と、Docker BakeによるDebianベースの構築。",
+              "text": "Incus用の構成生成と、環境要件・変更計画の検証。",
               "links": [
                 {
                   "title": "対応ライブラリと使い方",
@@ -109,11 +109,6 @@
                   "title": "environment-deployment",
                   "href": "https://github.com/vpremises/environment-deployment",
                   "summary": "環境構成の型、変更計画・結果の台帳、Incus用OpenTofu構成生成を扱う。"
-                },
-                {
-                  "title": "port-office",
-                  "href": "https://github.com/vpremises/port-office",
-                  "summary": "Docker Bakeで最小Debianベースを構築するためのDockerソース。"
                 }
               ]
             },
@@ -207,7 +202,7 @@
         {
           "path": "/capabilities/virtualization",
           "title": "コンテナと仮想化",
-          "summary": "Incus用の構成生成と、Docker BakeによるDebianベースの構築。",
+          "summary": "Incus用の構成生成と、環境要件・変更計画の検証。",
           "sections": [
             {
               "title": "対応するリポジトリ",
@@ -217,11 +212,6 @@
                   "title": "environment-deployment",
                   "href": "https://github.com/vpremises/environment-deployment",
                   "summary": "環境構成の型、変更計画・結果の台帳、Incus用OpenTofu構成生成を扱う。"
-                },
-                {
-                  "title": "port-office",
-                  "href": "https://github.com/vpremises/port-office",
-                  "summary": "Docker Bakeで最小Debianベースを構築するためのDockerソース。"
                 }
               ]
             },
@@ -232,10 +222,6 @@
                 {
                   "title": "environment-deployment — README",
                   "href": "https://github.com/vpremises/environment-deployment/blob/main/README.md"
-                },
-                {
-                  "title": "port-office — README",
-                  "href": "https://github.com/vpremises/port-office/blob/main/README.md"
                 }
               ]
             },
@@ -322,10 +308,10 @@
             },
             {
               "title": "コンテナと仮想化",
-              "text": "Incus向けのOpenTofu構成生成や、最小Debianベースの構築に取り組みます。",
+              "text": "Incus向けのOpenTofu構成生成と、環境要件・変更計画の検証を支援します。",
               "links": [
                 {
-                  "title": "実装を選ぶ：environment-deployment, port-office",
+                  "title": "実装を選ぶ：environment-deployment",
                   "href": "/capabilities/virtualization"
                 }
               ]
@@ -383,15 +369,11 @@
             },
             {
               "title": "コンテナと仮想化",
-              "text": "Incus用の構成生成と、Docker BakeによるDebianベースの構築。",
+              "text": "Incus用の構成生成と、環境要件・変更計画の検証。",
               "links": [
                 {
                   "title": "environment-deployment — README",
                   "href": "https://github.com/vpremises/environment-deployment/blob/main/README.md"
-                },
-                {
-                  "title": "port-office — README",
-                  "href": "https://github.com/vpremises/port-office/blob/main/README.md"
                 }
               ]
             },
@@ -611,13 +593,6 @@
       ],
       "resources": [
         {
-          "title": "port-office",
-          "summary": "Docker Bakeで最小Debianベースを構築するためのDockerソース。",
-          "href": "https://github.com/vpremises/port-office",
-          "category": "コンテナと仮想化",
-          "license": "Apache-2.0"
-        },
-        {
           "title": "environment-operations",
           "summary": "環境の計画・検査・操作を行うCLIと、利用例を提供する。",
           "href": "https://github.com/vpremises/environment-operations",
@@ -702,7 +677,7 @@
                 {
                   "title": "Containers and virtualization",
                   "href": "/capabilities/virtualization",
-                  "summary": "Work with Incus-oriented OpenTofu generation and minimal Debian base images.",
+                  "summary": "Generate Incus-oriented OpenTofu configuration and validate environment requirements and change plans.",
                   "icon": "/brand/icons/device.svg"
                 },
                 {
@@ -755,7 +730,7 @@
             },
             {
               "title": "Containers and virtualization",
-              "text": "Generate Incus configuration and build a Debian base with Docker Bake.",
+              "text": "Generate Incus configuration and validate environment requirements and change plans.",
               "links": [
                 {
                   "title": "Libraries and usage",
@@ -765,11 +740,6 @@
                   "title": "environment-deployment",
                   "href": "https://github.com/vpremises/environment-deployment",
                   "summary": "Environment schemas, resolution, plan/receipt ledgers and Incus rendering; no actual profiles."
-                },
-                {
-                  "title": "port-office",
-                  "href": "https://github.com/vpremises/port-office",
-                  "summary": "A minimal non-root Debian base with CA trust, maintained with Docker Bake. Image publication requires separate acceptance."
                 }
               ]
             },
@@ -863,7 +833,7 @@
         {
           "path": "/capabilities/virtualization",
           "title": "Containers and virtualization",
-          "summary": "Generate Incus configuration and build a Debian base with Docker Bake.",
+          "summary": "Generate Incus configuration and validate environment requirements and change plans.",
           "sections": [
             {
               "title": "Repositories for this capability",
@@ -873,11 +843,6 @@
                   "title": "environment-deployment",
                   "href": "https://github.com/vpremises/environment-deployment",
                   "summary": "Environment schemas, resolution, plan/receipt ledgers and Incus rendering; no actual profiles."
-                },
-                {
-                  "title": "port-office",
-                  "href": "https://github.com/vpremises/port-office",
-                  "summary": "A minimal non-root Debian base with CA trust, maintained with Docker Bake. Image publication requires separate acceptance."
                 }
               ]
             },
@@ -888,10 +853,6 @@
                 {
                   "title": "environment-deployment — README",
                   "href": "https://github.com/vpremises/environment-deployment/blob/main/README.md"
-                },
-                {
-                  "title": "port-office — README",
-                  "href": "https://github.com/vpremises/port-office/blob/main/README.md"
                 }
               ]
             },
@@ -978,10 +939,10 @@
             },
             {
               "title": "Containers and virtualization",
-              "text": "Work with Incus-oriented OpenTofu generation and minimal Debian base images.",
+              "text": "Generate Incus-oriented OpenTofu configuration and validate environment requirements and change plans.",
               "links": [
                 {
-                  "title": "Choose: environment-deployment, port-office",
+                  "title": "Choose: environment-deployment",
                   "href": "/capabilities/virtualization"
                 }
               ]
@@ -1039,15 +1000,11 @@
             },
             {
               "title": "Containers and virtualization",
-              "text": "Generate Incus configuration and build a Debian base with Docker Bake.",
+              "text": "Generate Incus configuration and validate environment requirements and change plans.",
               "links": [
                 {
                   "title": "environment-deployment — README",
                   "href": "https://github.com/vpremises/environment-deployment/blob/main/README.md"
-                },
-                {
-                  "title": "port-office — README",
-                  "href": "https://github.com/vpremises/port-office/blob/main/README.md"
                 }
               ]
             },
@@ -1266,13 +1223,6 @@
         }
       ],
       "resources": [
-        {
-          "title": "port-office",
-          "summary": "A minimal non-root Debian base with CA trust, maintained with Docker Bake. Image publication requires separate acceptance.",
-          "href": "https://github.com/vpremises/port-office",
-          "category": "Containers and virtualization",
-          "license": "Apache-2.0"
-        },
         {
           "title": "environment-operations",
           "summary": "Product planning CLI, security inspector, Windows custody helper and playgrounds.",
