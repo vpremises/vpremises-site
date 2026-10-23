@@ -4,22 +4,6 @@
   "observedAt": "2026-10-14T15:09:41Z",
   "entries": [
     {
-      "id": "vpremises-port-office",
-      "kind": "oss",
-      "name": {
-        "ja": "port-office",
-        "en": "port-office"
-      },
-      "summary": {
-        "ja": "Docker Bakeで管理する、非root・CA証明書付きの最小Debianベース。イメージ公開は別途受入。",
-        "en": "A minimal non-root Debian base with CA trust, maintained with Docker Bake. Image publication requires separate acceptance."
-      },
-      "repository": "https://github.com/vpremises/port-office",
-      "homepage": "https://github.com/vpremises/port-office",
-      "license": "Apache-2.0",
-      "metrics": []
-    },
-    {
       "id": "vpremises-environment-operations",
       "kind": "oss",
       "name": {

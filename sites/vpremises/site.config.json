@@ -26,7 +26,7 @@
         {
           "id": "focus-2",
           "title": "コンテナと仮想化の基盤",
-          "summary": "Incus用のOpenTofu構成生成、最小Debianベース、Traefikのルーティング例を提供します。"
+          "summary": "Incus用のOpenTofu構成生成と、Traefikのルーティング例を提供します。"
         },
         {
           "id": "focus-3",
@@ -58,7 +58,7 @@
               "id": "container-base",
               "title": "コンテナの基礎とルーティング例",
               "body": [
-                "port-officeはDocker Bakeで管理する、非root・CA証明書付きの最小Debianベースです。Node/Pythonや製品実装を同梱せず、現在はイメージ公開前のsource候補です。cloud-routerはDocker SwarmとTraefikのHTTP/HTTPS構成例を提供します。設定検証と実配備・証明書発行を分けます。"
+                "cloud-routerはDocker SwarmとTraefikのHTTP/HTTPS構成例を提供します。Incus向けの構成生成はenvironment-deploymentが担当します。設定検証と実配備・証明書発行を分けます。"
               ]
             },
             {
@@ -86,7 +86,7 @@
               "id": "select",
               "title": "目的から選ぶ",
               "body": [
-                "構成と変更計画はenvironment-deployment、環境計画CLIと検査はenvironment-operations、Debianベースはport-office、ルーティング例はcloud-routerから始めます。各プロジェクトのREADMEとLICENSEで利用手順を確認してください。"
+                "構成と変更計画はenvironment-deployment、環境計画CLIと検査はenvironment-operations、ルーティング例はcloud-routerから始めます。各プロジェクトのREADMEとLICENSEで利用手順を確認してください。"
               ]
             },
             {
@@ -156,7 +156,7 @@
         {
           "id": "focus-2",
           "title": "Container and virtualization foundations",
-          "summary": "Generate Incus OpenTofu configuration; explore a minimal Debian base and Traefik routing examples."
+          "summary": "Generate Incus OpenTofu configuration and explore Traefik routing examples."
         },
         {
           "id": "focus-3",
@@ -188,7 +188,7 @@
               "id": "container-base",
               "title": "Container foundations and routing examples",
               "body": [
-                "port-office maintains a minimal non-root Debian base with CA trust through Docker Bake. It includes no Node/Python runtime or product implementation and remains an unpublished image candidate. cloud-router provides HTTP/HTTPS Docker Swarm and Traefik examples; configuration validation is separate from deployment and certificate issuance."
+                "cloud-router provides HTTP/HTTPS Docker Swarm and Traefik examples. environment-deployment owns Incus configuration generation. Configuration validation is separate from deployment and certificate issuance."
               ]
             },
             {
@@ -216,7 +216,7 @@
               "id": "select",
               "title": "Choose by purpose",
               "body": [
-                "Start with environment-deployment for plans, environment-operations for operator tools and inspection, port-office for the Debian base, and cloud-router for routing examples. Follow each project README and license."
+                "Start with environment-deployment for plans, environment-operations for operator tools and inspection, and cloud-router for routing examples. Follow each project README and license."
               ]
             },
             {
