@@ -1,0 +1,175 @@
+{
+  "siteId": "vpremises",
+  "origin": "https://vpremises.com",
+  "defaultLocale": "en",
+  "locales": {
+    "ja": {
+      "brand": "vPremises",
+      "caption": "",
+      "origin": "https://vpremises.com",
+      "locale": "ja",
+      "accent": "#087c72",
+      "navigation": [
+        {
+          "title": "できること",
+          "href": "/capabilities"
+        },
+        {
+          "title": "活用シーン",
+          "href": "/use-cases"
+        },
+        {
+          "title": "ライブラリ",
+          "href": "/oss"
+        },
+        {
+          "title": "ドキュメント",
+          "href": "/docs"
+        }
+      ],
+      "resources": [
+        {
+          "title": "environment-operations",
+          "summary": "環境の計画・検査・操作を行うCLIと、利用例を提供する。",
+          "href": "https://github.com/vpremises/environment-operations",
+          "category": "環境操作のCLI",
+          "license": "Apache-2.0"
+        },
+        {
+          "title": "environment-deployment",
+          "summary": "環境構成の型、変更計画・結果の台帳、Incus用OpenTofu構成生成を扱う。",
+          "href": "https://github.com/vpremises/environment-deployment",
+          "category": "環境構成と計画",
+          "license": "Apache-2.0"
+        },
+        {
+          "title": "vpremises-site",
+          "summary": "vPremisesの環境構成・運用ツールを紹介するサイトのソース。",
+          "href": "https://github.com/vpremises/vpremises-site",
+          "category": "プロジェクト情報",
+          "license": "Apache-2.0"
+        },
+        {
+          "title": "cloud-router",
+          "summary": "Docker SwarmとTraefikのHTTP・HTTPSルーティング構成例。",
+          "href": "https://github.com/vpremises/cloud-router",
+          "category": "Web配備の構成例",
+          "license": "Apache-2.0"
+        },
+        {
+          "title": "azure-openemr",
+          "summary": "OpenEMRのホスト配備とNGINX設定を検証する構成例。",
+          "href": "https://github.com/vpremises/azure-openemr",
+          "category": "Web配備の構成例",
+          "license": "GPL-3.0"
+        }
+      ],
+      "icon": "/brand/icon.png",
+      "secondaryAction": {
+        "title": "導入・ドキュメント",
+        "href": "/docs"
+      },
+      "pageOrder": [
+        "/",
+        "/capabilities",
+        "/capabilities/configuration",
+        "/capabilities/virtualization",
+        "/capabilities/operations",
+        "/use-cases",
+        "/oss",
+        "/docs",
+        "/docs/getting-started",
+        "/journal",
+        "/contact",
+        "/privacy",
+        "/security",
+        "/sitemap",
+        "/capabilities/web-hosting"
+      ]
+    },
+    "en": {
+      "brand": "vPremises",
+      "caption": "",
+      "origin": "https://vpremises.com",
+      "locale": "en",
+      "accent": "#087c72",
+      "navigation": [
+        {
+          "title": "Explore the toolkit",
+          "href": "/capabilities"
+        },
+        {
+          "title": "Use cases",
+          "href": "/use-cases"
+        },
+        {
+          "title": "Libraries",
+          "href": "/oss"
+        },
+        {
+          "title": "Docs",
+          "href": "/docs"
+        }
+      ],
+      "resources": [
+        {
+          "title": "environment-operations",
+          "summary": "Product planning CLI, security inspector, Windows custody helper and playgrounds.",
+          "href": "https://github.com/vpremises/environment-operations",
+          "category": "Environment operations",
+          "license": "Apache-2.0"
+        },
+        {
+          "title": "environment-deployment",
+          "summary": "Environment schemas, resolution, plan/receipt ledgers and Incus rendering; no actual profiles.",
+          "href": "https://github.com/vpremises/environment-deployment",
+          "category": "Configuration and planning",
+          "license": "Apache-2.0"
+        },
+        {
+          "title": "vpremises-site",
+          "summary": "A bilingual site explaining environment configuration, planning, inspection and container foundations.",
+          "href": "https://github.com/vpremises/vpremises-site",
+          "category": "Project information",
+          "license": "Apache-2.0"
+        },
+        {
+          "title": "cloud-router",
+          "summary": "HTTP/HTTPS Docker Swarm and Traefik routing examples with local configuration validation.",
+          "href": "https://github.com/vpremises/cloud-router",
+          "category": "Web hosting examples",
+          "license": "Apache-2.0"
+        },
+        {
+          "title": "azure-openemr",
+          "summary": "OpenEMR host-deployment and NGINX protected-path examples; no Azure resource provisioning.",
+          "href": "https://github.com/vpremises/azure-openemr",
+          "category": "Web hosting examples",
+          "license": "GPL-3.0"
+        }
+      ],
+      "icon": "/brand/icon.png",
+      "secondaryAction": {
+        "title": "Setup & documentation",
+        "href": "/docs"
+      },
+      "pageOrder": [
+        "/",
+        "/capabilities",
+        "/capabilities/configuration",
+        "/capabilities/virtualization",
+        "/capabilities/operations",
+        "/use-cases",
+        "/oss",
+        "/docs",
+        "/docs/getting-started",
+        "/journal",
+        "/contact",
+        "/privacy",
+        "/security",
+        "/sitemap",
+        "/capabilities/web-hosting"
+      ]
+    }
+  }
+}
