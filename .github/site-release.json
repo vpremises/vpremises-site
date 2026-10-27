@@ -18,7 +18,8 @@
       "appDirectory": ".",
       "assetDirectory": ".output/vpremises/public",
       "buildKind": "organization",
-      "zone": "80bbd7b62b40c9e52af1b34496667b0d"
+      "zone": "80bbd7b62b40c9e52af1b34496667b0d",
+      "documentDirectory": "site"
     }
   ]
 }
