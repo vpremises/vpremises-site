@@ -136,11 +136,11 @@
       },
       "privacy": {
         "label": "プライバシー",
-        "summary": "公開サイトは端末情報や環境設定を収集しません。検査結果と運用台帳は、利用者が選んだローカルまたは非公開の保管先で管理します。"
+        "summary": "お問い合わせ・情報提供には株式会社HATの共通プライバシーポリシーを適用します。"
       },
       "contact": {
         "label": "vPremisesに関する連絡",
-        "summary": "各公開リポジトリのIssueで、目的と最小限の再現手順を共有してください。実profile、資格情報、検出した秘密情報、顧客・医療データは送らないでください。"
+        "summary": "お問い合わせフォームをご利用ください。返信先は任意です。秘密情報は送らないでください。"
       }
     },
     "en": {
@@ -266,11 +266,11 @@
       },
       "privacy": {
         "label": "Privacy",
-        "summary": "This public site does not collect device information or environment configuration. Inspection results and operation ledgers remain in owner-selected local or private storage."
+        "summary": "The common HAT Inc. privacy policy applies to inquiries and reports."
       },
       "contact": {
         "label": "vPremises contact",
-        "summary": "Use the owning public repository Issues for minimal reproduction steps. Do not share real profiles, credentials, detected secrets or customer/medical data."
+        "summary": "Use the contact form. Reply email is optional. Do not send confidential information."
       }
     }
   }
